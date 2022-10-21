@@ -8,13 +8,15 @@
     <title>Clima Atualizado</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="./js/scripit.js" defer></script>
-    
+
     <!-- Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -32,10 +34,10 @@
             <h2>
                 <i class="fa-solid fa-location-dot"></i>
                 <span id="city"></span>
-                <img src="" alt="Bandeira do país" id="country" />                
-            </h2>            
+                <img src="" alt="Bandeira do país" id="country" />
+            </h2>
             <p id="temperature"><span></span>&deg;C</p>
-            <div id="description-container">                
+            <div id="description-container">
                 <p id="description"></p>
                 <img src="" alt="Condições do tempo" id="weather-icon">
             </div>
@@ -49,6 +51,22 @@
                     <span></span>
                 </p>
             </div>
+        </div>
+        <div id="error-message" class="hide">
+            <p>Não foi possível encontrar o clima de uma cidade com este nome</p>
+        </div>
+        <div id="loader" class="hide">
+            <i class="fa-solid fa-spinner"></i>
+        </div>
+        <div id="suggestions">
+            <button id="viena">Viena</button>
+            <button id="copenhague">Copenhague</button>
+            <button id="zurique">Zurique</button>
+            <button id="vancouver">Vancouver</button>
+            <button id="genebra">Genebra</button>
+            <button id="frankfurt">Frankfurt</button>
+            <button id="osaka">Osaka</button>
+            <button id="maceio">Maceió</button>
         </div>
     </div>
 </body>
