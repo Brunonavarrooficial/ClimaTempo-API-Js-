@@ -33,7 +33,7 @@ const toggleLoader = () => {
 const getWeatherData = async (city) => {
     toggleLoader();
 
-    const apiWeatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&lang=pt_br` //api do .env colocar!!
+    const apiWeatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&lang=pt_br`;
 
     const res = await fetch(apiWeatherURL);
     const data = await res.json();
@@ -103,10 +103,10 @@ cityInput.addEventListener('keyup', (e) => {
 // Sugestões
 suggestionButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      const city = btn.getAttribute("id");
-  
-      showWeatherData(city);
+        const city = btn.getAttribute("id");
+
+        showWeatherData(city);
     });
-  });
+});
 
 
