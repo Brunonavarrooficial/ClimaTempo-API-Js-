@@ -33,15 +33,17 @@ const toggleLoader = () => {
 const getWeatherData = async (city) => {
     toggleLoader();
 
-    const apiWeatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&lang=pt_br`;
+    const apiWeatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`; //&lang=pt_br
 
-    const res = await fetch(apiWeatherURL, {
-        headers: [
-            { key: 'Access-Control-Allow-Origin', value: '*' },
-            { key: 'Access-Control-Allow-Methods', value: 'POST, GET, OPTIONS, HEAD' },
-            { key: 'Access-Control-Allow-Headers', value: ' X-Requested-With' },
-        ],
-    });
+    const res = await fetch(apiWeatherURL /*, {
+        mode: 'no-cors',
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, HEAD',
+            'Access-Control-Allow-Headers': ' X-Requested-With',
+        },
+        referrerPolicy: 'no-referrer',
+    }*/);
     const data = await res.json();
 
     toggleLoader();
