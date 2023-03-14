@@ -10,7 +10,7 @@
     * [x] Primeiro passo faça cadastro no site OpenWeather para conseguir uma API e por lá você também pode conferir a documentação da API:
         * [Open Weather](https://openweathermap.org/) 🌡️ 
     * [x] Site da Api para coletar a bamdeira do país:
-      * [Country Flags Api](https://countryflagsapi.com) 🗺️
+      * [Country Flags Api](https://flagsapi.com) 🗺️
     * [x] Site da Api para coletar wallpapers confome cidade solicitada na requisição:
        * [Source Unsplash](https://source.unsplash.com) 🧭    
 #

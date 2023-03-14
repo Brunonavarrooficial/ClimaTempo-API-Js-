@@ -1,6 +1,8 @@
 // API
 const apiKey = '447954334ef4e0c591d2ef05536ccc95';
-const apiCountryURL = 'https://countryflagsapi.com/png/';
+//const apiCountryURL = 'https://countryflagsapi.com/png/';
+const apiCountryURL = 'https://flagsapi.com/';
+const apiCountryParams = '/flat/64.png';
 const apiUnsplash = "https://source.unsplash.com/1600x900/?";
 
 // Selector Dom HTML
@@ -35,15 +37,7 @@ const getWeatherData = async (city) => {
 
     const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&lang=pt_br`;
 
-    const res = await fetch(apiWeatherURL /*, {
-        mode: 'no-cors',
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, HEAD',
-            'Access-Control-Allow-Headers': ' X-Requested-With',
-        },
-        referrerPolicy: 'no-referrer',
-    }*/);
+    const res = await fetch(apiWeatherURL);
     const data = await res.json();
 
     toggleLoader();
@@ -80,7 +74,7 @@ const showWeatherData = async (city) => {
         'src',
         `https://openweathermap.org/img/wn/${dataShow.weather[0].icon}.png`
     );
-    countryElement.setAttribute('src', apiCountryURL + dataShow.sys.country);
+    countryElement.setAttribute('src', apiCountryURL + dataShow.sys.country + apiCountryParams);
     humidityElement.innerHTML = `${dataShow.main.humidity}%`;
     windElement.innerHTML = `${dataShow.wind.speed}km/h`;
 
